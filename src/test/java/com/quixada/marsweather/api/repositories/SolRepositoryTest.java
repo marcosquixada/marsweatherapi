@@ -21,14 +21,14 @@ public class SolRepositoryTest {
 	@Autowired
 	private SolRepository SolRepository;
 	
-	private static final String ID = "227";
+	private static final Long ID = 451L;
 
 	@Before
 	public void setUp() throws Exception {
 		Sol Sol = new Sol();
-		Sol.setMx(2);
-		Sol.setMn(1);
-		Sol.setAv(1.5f);
+		Sol.setMx("2");
+		Sol.setMn("1");
+		Sol.setAv("1.5");
 		Sol.setId(1L);
 		this.SolRepository.save(Sol);
 	}
@@ -39,7 +39,7 @@ public class SolRepositoryTest {
 	}
 
 	@Test
-	public void testBuscarPorCnpj() {
+	public void testFindByID() {
 		Sol Sol = this.SolRepository.findById(ID);
 		
 		assertEquals(ID, Sol.getId());

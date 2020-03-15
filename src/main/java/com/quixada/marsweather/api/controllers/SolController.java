@@ -43,14 +43,14 @@ public class SolController {
 	 * @return ResponseEntity<Response<SolDto>>
 	 */
 	@GetMapping(value = "/id/{id}")
-	public ResponseEntity<Response<SolDto>> findById(@PathVariable("id") String id) {
+	public ResponseEntity<Response<SolDto>> findById(@PathVariable("id") Long id) {
 		log.info("Finding SOL by ID: {}", id);
 		Response<SolDto> response = new Response<SolDto>();
 		Optional<Sol> sol = solService.findById(id);
 
 		if (!sol.isPresent()) {
-			log.info("Sol not found by id: {}", id);
-			response.getErrors().add("Sol not found by id " + id);
+			log.info("Sol not found by ID: {}", id);
+			response.getErrors().add("Sol not found for ID " + id);
 			return ResponseEntity.badRequest().body(response);
 		}
 

@@ -30,23 +30,23 @@ public class SolServiceTest {
 	@Autowired
 	private SolService SolService;
 
-	private static final String ID = "2";
+	private static final Long ID = 2L;
 
 	@Before
 	public void setUp() throws Exception {
-		BDDMockito.given(this.SolRepository.findById(Mockito.anyString())).willReturn(new Sol());
+		BDDMockito.given(this.SolRepository.findById(Mockito.anyLong())).willReturn(new Sol());
 		BDDMockito.given(this.SolRepository.save(Mockito.any(Sol.class))).willReturn(new Sol());
 	}
 
 	@Test
-	public void testBuscarSolPorCnpj() {
+	public void testFindSolByID() {
 		Optional<Sol> Sol = this.SolService.findById(ID);
 
 		assertTrue(Sol.isPresent());
 	}
 	
 	@Test
-	public void testPersistirSol() {
+	public void testPersistSol() {
 		Sol Sol = this.SolService.persist(new Sol());
 
 		assertNotNull(Sol);

@@ -17,9 +17,9 @@ public class Sol implements Serializable {
 	private static final long serialVersionUID = 3960436649365666213L;
 	
 	private Long id;
-	private float mx;
-	private float mn;
-	private float av;
+	private String mx;
+	private String mn;
+	private String av;
 	private Date createdAt;
 	private Date updatedAt;
 	
@@ -36,29 +36,29 @@ public class Sol implements Serializable {
 	}
 
 	@Column(name = "mx", nullable = false)
-	public float getMx() {
+	public String getMx() {
 		return mx;
 	}
 
-	public void setMx(float mx) {
+	public void setMx(String mx) {
 		this.mx = mx;
 	}
 
 	@Column(name = "mn", nullable = false)
-	public float getMn() {
+	public String getMn() {
 		return mn;
 	}
 
-	public void setMn(float mn) {
+	public void setMn(String mn) {
 		this.mn = mn;
 	}
 	
 	@Column(name = "av", nullable = false)
-	public float getAv() {
+	public String getAv() {
 		return av;
 	}
 
-	public void setAv(float av) {
+	public void setAv(String av) {
 		this.av = av;
 	}
 

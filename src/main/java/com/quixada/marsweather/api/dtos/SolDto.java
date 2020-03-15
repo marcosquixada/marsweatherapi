@@ -3,9 +3,9 @@ package com.quixada.marsweather.api.dtos;
 public class SolDto {
 	
 	private Long id;
-	private float mn;
-	private float mx;
-	private float av;
+	private String mn;
+	private String mx;
+	private String av;
 
 	public SolDto() {
 	}
@@ -24,27 +24,27 @@ public class SolDto {
 		return "SolDto [id=" + id + ", mx=" + mx + ", mn=" + mn + "]";
 	}
 
-	public float getMn() {
+	public String getMn() {
 		return mn;
 	}
 
-	public void setMn(float mn) {
+	public void setMn(String mn) {
 		this.mn = mn;
 	}
 
-	public float getMx() {
+	public String getMx() {
 		return mx;
 	}
 
-	public void setMx(float mx) {
+	public void setMx(String mx) {
 		this.mx = mx;
 	}
 
-	public float getAv() {
+	public String getAv() {
 		return av;
 	}
 
-	public void setAv(float av) {
+	public void setAv(String av) {
 		this.av = av;
 	}
 

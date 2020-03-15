@@ -37,13 +37,13 @@ public class SolControllerTest {
 
 	private static final String FIND_SOL_ID_URL = "/api/sols/id/";
 	private static final Long ID = Long.valueOf(1);
-	private static final float MX = Float.valueOf("2.0");
-	private static final float MN = Float.valueOf("1.0");
-	private static final float AV = Float.valueOf("1.5");
+	private static final String MX = "2.0";
+	private static final String MN = "1.0";
+	private static final String AV = "1.5";
 
 	@Test
 	public void testFindSolByInvalidId() throws Exception {
-		BDDMockito.given(this.SolService.findById(Mockito.anyString())).willReturn(Optional.empty());
+		BDDMockito.given(this.SolService.findById(Mockito.anyLong())).willReturn(Optional.empty());
 
 		mvc.perform(MockMvcRequestBuilders.get(FIND_SOL_ID_URL + ID).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isBadRequest())
@@ -52,7 +52,7 @@ public class SolControllerTest {
 
 	@Test
 	public void testFindSolByValidId() throws Exception {
-		BDDMockito.given(this.SolService.findById(Mockito.anyString()))
+		BDDMockito.given(this.SolService.findById(Mockito.anyLong()))
 				.willReturn(Optional.of(this.getSolData()));
 
 		mvc.perform(MockMvcRequestBuilders.get(FIND_SOL_ID_URL + ID)

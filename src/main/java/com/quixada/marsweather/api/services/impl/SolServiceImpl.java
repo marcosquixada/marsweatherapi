@@ -22,7 +22,7 @@ public class SolServiceImpl implements SolService {
 	private SolRepository solRepository;
 
 	@Override
-	public Optional<Sol> findById(String id) {
+	public Optional<Sol> findById(Long id) {
 		log.info("Finding by ID {}", id);
 		return Optional.ofNullable(solRepository.findById(id));
 	}

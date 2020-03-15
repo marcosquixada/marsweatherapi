@@ -15,7 +15,7 @@ public interface SolService {
 	 * @param id
 	 * @return Optional<Sol>
 	 */
-	Optional<Sol> findById(String id);
+	Optional<Sol> findById(Long id);
 	
 	/**
 	 * Create a new SOL in the Database.

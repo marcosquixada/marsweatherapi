@@ -10,7 +10,7 @@ import com.quixada.marsweather.api.entities.Sol;
 public interface SolRepository extends JpaRepository<Sol, Long> {
 	
 	@Transactional(readOnly = true)
-	Sol findById(String id);
+	Sol findById(Long id);
 	
 	Page<Sol> findAll(Pageable pageable);
 

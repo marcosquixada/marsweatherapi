@@ -11,13 +11,13 @@ The RESTful API of the Mars Weather System contains the following tips:
 Certify yourself of having maven installed and set the environment variables to the path of your operating system, as well as Git.
 ```
 git clone https://github.com/marcosquixada/marsweatherapi.git
-cd ponto-inteligente-api
+cd mars-weather-api
 mvn spring-boot:run
-Acesse os endpoints através da url http://localhost:8080
+Access the endpoints by the url http://localhost:8080
 ```
-### Importando o projeto no Eclipse ou STS
-No terminal, execute a seguinte operação:
+### Importing the project from Eclipse or STS
+On terminal, execute the following operation:
 ```
 mvn eclipse:eclipse
 ```
-No Eclipse/STS, importe o projeto como projeto Maven.
+On Eclipse/STS, import the project as a Maven project.
