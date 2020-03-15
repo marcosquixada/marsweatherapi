@@ -21,3 +21,6 @@ On terminal, execute the following operation:
 mvn eclipse:eclipse
 ```
 On Eclipse/STS, import the project as a Maven project.
+
+# Documentation
+* Access the documentation through URL: http://localhost:8080/swagger-ui.html

@@ -53,9 +53,9 @@ public class MarsWeatherApplication {
 					   System.out.println(key + " - " + " AT: " + js.getJSONObject("AT"));
 					   Sol sol = new Sol();
 					   sol.setId(Long.parseLong(key));
-					   sol.setMn(js.getJSONObject("AT").getString("mn"));
-					   sol.setMx(js.getJSONObject("AT").getString("mx"));
-					   sol.setAv(js.getJSONObject("AT").getString("av"));
+					   sol.setMn(js.getJSONObject("AT").get("mn").toString());
+					   sol.setMx(js.getJSONObject("AT").get("mx").toString());
+					   sol.setAv(js.getJSONObject("AT").get("av").toString());
 					   
 					   solService.persist(sol);
 				   }
